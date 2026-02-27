@@ -1,0 +1,67 @@
+# ===========================================
+# Personal Portfolio - Git Ignore Configuration
+# ===========================================
+
+# --- Operating System Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# --- IDE & Editor ---
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# --- Node.js (if using build tools or chatbot libraries) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+yarn.lock
+
+# --- Environment & Secrets ---
+.env
+.env.local
+.env.*.local
+*.pem
+secrets/
+
+# --- Build & Output ---
+dist/
+build/
+out/
+*.min.js
+*.min.css
+.cache/
+
+# --- Logs ---
+logs/
+*.log
+npm-debug.log*
+
+# --- Temporary Files ---
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+
+# --- Personal/Private (Optional - uncomment if needed) ---
+PERSONAL_INFO.md  
+PROJECT_PLAN.md
+IMPLEMENTATION_CHECKLIST.md
+CODE_STRUCTURE.md
+# resume-draft.pdf
+# personal-notes/
+# credentials/
+
+# --- Dialogflow/API Keys (NEVER commit) ---
+# service-account.json
+# dialogflow-credentials.json
