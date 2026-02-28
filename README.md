@@ -6,7 +6,9 @@ A professional personal portfolio website showcasing skills, experience, educati
 
 ## Live Demo
 
-[Add your live portfolio URL here after deployment]
+https://joyful-jalebi-2f13b7.netlify.app/
+
+**GitHub:** https://github.com/sudais7/personal-portfolio
 
 ---
 
@@ -58,7 +60,7 @@ The portfolio includes a **JavaScript-based chatbot** that answers frequently as
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/personal-portfolio.git
+   git clone https://github.com/sudais7/personal-portfolio.git
    cd personal-portfolio
    ```
 
