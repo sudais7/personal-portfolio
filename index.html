@@ -98,9 +98,10 @@
   <section id="resume" class="section section-resume">
     <div class="container">
       <h2 class="section-title">Resume</h2>
+      <p class="resume-description">View or download my resume with skills, experience, and education.</p>
       <div class="resume-actions">
         <a href="assets/resume/resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">View Resume</a>
-        <a href="assets/resume/resume.pdf" download class="btn btn-secondary">Download Resume</a>
+        <a href="assets/resume/resume.pdf" download="Sudais_Mohamed_Resume.pdf" class="btn btn-secondary">Download Resume</a>
       </div>
     </div>
   </section>
@@ -109,8 +110,7 @@
   <section id="contact" class="section section-contact">
     <div class="container">
       <h2 class="section-title">Contact</h2>
-      <!-- Replace YOUR_FORM_ID with your Formspree form ID from formspree.io -->
-      <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mreavggy" method="POST">
         <input type="hidden" name="_subject" value="Portfolio Contact - New message">
         <div class="form-group">
           <label for="name">Name</label>
@@ -124,7 +124,8 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" required placeholder="Your message"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn btn-primary" id="form-submit-btn">Send Message</button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
       </form>
     </div>
   </section>

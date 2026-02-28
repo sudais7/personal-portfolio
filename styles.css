@@ -219,6 +219,13 @@ ul {
 .section {
   padding: var(--spacing-3xl) 0;
   min-height: 50vh;
+  opacity: 1;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .section-title {
@@ -428,6 +435,15 @@ ul {
   background: var(--bg-color);
 }
 
+.resume-description {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: var(--spacing-xl);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .resume-actions {
   display: flex;
   gap: var(--spacing-md);
@@ -480,6 +496,23 @@ ul {
 
 .contact-form .btn {
   width: 100%;
+}
+
+.form-status {
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+.form-status-success {
+  color: #276749;
+  background: #c6f6d5;
+}
+
+.form-status-error {
+  color: #c53030;
+  background: #fed7d7;
 }
 
 /* Footer */

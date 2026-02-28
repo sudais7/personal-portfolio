@@ -49,13 +49,60 @@
     }
   });
 
-  // --- Contact form (Formspree) ---
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      // Form submits to Formspree; no preventDefault needed
-      // Optional: show success message via Formspree's redirect or JSON response
+  // --- Contact form (Formspree) - matches Formspree recommended pattern ---
+  var contactForm = document.getElementById('contact-form');
+  var formStatus = document.getElementById('form-status');
+  var formSubmitBtn = document.getElementById('form-submit-btn');
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    if (formSubmitBtn) {
+      formSubmitBtn.disabled = true;
+      formSubmitBtn.textContent = 'Sending...';
+    }
+    if (formStatus) {
+      formStatus.textContent = '';
+      formStatus.className = 'form-status';
+    }
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: event.target.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        if (formStatus) {
+          formStatus.textContent = 'Thanks for your submission! I\'ll get back to you soon.';
+          formStatus.className = 'form-status form-status-success';
+        }
+        contactForm.reset();
+      } else {
+        return response.json().then(function (data) {
+          if (formStatus) {
+            if (data.errors && data.errors.length) {
+              formStatus.textContent = data.errors.map(function (e) { return e.message; }).join(', ');
+            } else {
+              formStatus.textContent = 'Oops! There was a problem submitting your form.';
+            }
+            formStatus.className = 'form-status form-status-error';
+          }
+        });
+      }
+    }).catch(function () {
+      if (formStatus) {
+        formStatus.textContent = 'Oops! There was a problem submitting your form.';
+        formStatus.className = 'form-status form-status-error';
+      }
+    }).finally(function () {
+      if (formSubmitBtn) {
+        formSubmitBtn.disabled = false;
+        formSubmitBtn.textContent = 'Send Message';
+      }
     });
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', handleFormSubmit);
   }
 
   // --- QR Code: generate from current page URL ---
