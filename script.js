@@ -49,12 +49,19 @@
     }
   });
 
-  // --- Contact form (placeholder - configure Formspree/Netlify in Phase 5) ---
+  // --- Contact form (Formspree) ---
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
-      // Form will submit normally if action is set
-      // Add validation or success message in Phase 5
+      // Form submits to Formspree; no preventDefault needed
+      // Optional: show success message via Formspree's redirect or JSON response
     });
+  }
+
+  // --- QR Code: generate from current page URL ---
+  const qrImg = document.getElementById('qr-code');
+  if (qrImg) {
+    const portfolioUrl = window.location.href.split('#')[0];
+    qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(portfolioUrl);
   }
 })();
