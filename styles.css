@@ -392,6 +392,46 @@ ul {
   background: var(--bg-alt);
 }
 
+.projects-intro {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: var(--spacing-lg);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.filter-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: white;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.filter-btn.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -420,6 +460,15 @@ ul {
 .project-card p {
   color: var(--text-light);
   margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+
+.project-tech {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
 }
 
 .project-link {
@@ -428,6 +477,52 @@ ul {
 
 .project-card.placeholder {
   opacity: 0.85;
+}
+
+.project-card.hidden {
+  display: none;
+}
+
+.projects-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--border-color);
+}
+
+.page-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: white;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.page-btn:hover:not(:disabled) {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+.projects-pagination.hidden {
+  display: none;
 }
 
 /* Resume */
