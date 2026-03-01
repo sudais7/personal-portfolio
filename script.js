@@ -105,11 +105,11 @@
     contactForm.addEventListener('submit', handleFormSubmit);
   }
 
-  // --- QR Code: generate from current page URL ---
+  // --- QR Code: always link to live portfolio (not localhost) ---
   const qrImg = document.getElementById('qr-code');
   if (qrImg) {
-    const portfolioUrl = window.location.href.split('#')[0];
-    qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(portfolioUrl);
+    const LIVE_PORTFOLIO_URL = 'https://joyful-jalebi-2f13b7.netlify.app/';
+    qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(LIVE_PORTFOLIO_URL);
   }
 
   // --- Projects: filter tabs + pagination ---

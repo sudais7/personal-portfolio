@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog - Sudais Mohamed - IT, Cybersecurity, and Lab write-ups">
+  <title>Blog | Sudais Mohamed</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .blog-intro { text-align: center; margin-bottom: 2rem; color: var(--text-light); }
+    .blog-list { max-width: 700px; margin: 0 auto; }
+    .blog-post { margin-bottom: 2rem; padding: 1.5rem; background: var(--bg-alt); border-radius: var(--border-radius-lg); border: 1px solid var(--border-color); }
+    .blog-post h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
+    .blog-post .date { font-size: 0.875rem; color: var(--text-light); margin-bottom: 0.75rem; }
+    .blog-post p { color: var(--text-light); margin-bottom: 1rem; }
+    .blog-post a { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <nav id="navbar" class="navbar">
+    <div class="nav-container container">
+      <a href="index.html" class="nav-brand">SM</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="index.html#resume" class="nav-link">Resume</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: calc(var(--nav-height) + 2rem);">
+    <div class="container">
+      <h1 class="section-title">Blog</h1>
+      <p class="blog-intro">Lab write-ups, learnings, and reflections on IT, cybersecurity, and DevOps.</p>
+      <div class="blog-list">
+        <article class="blog-post">
+          <h3>iptables Firewall Lab — Packet Filtering Basics</h3>
+          <p class="date">Lab write-up</p>
+          <p>Configuring Linux firewall rules with iptables: INPUT, OUTPUT, and FORWARD chains. How to allow/block specific traffic, filter packets, and understand firewall architecture.</p>
+          <a href="blog/iptables-lab.html">Read more &rarr;</a>
+        </article>
+        <article class="blog-post">
+          <h3>Hyper-V VM Templates — Reusable Infrastructure</h3>
+          <p class="date">Lab write-up</p>
+          <p>Building VMs from scratch, creating templates for reuse, converting disks, and preventing network conflicts between cloned machines. Enterprise infrastructure engineering.</p>
+          <a href="blog/hyperv-templates.html">Read more &rarr;</a>
+        </article>
+        <article class="blog-post">
+          <h3>Docker Container Networking — Hands-On</h3>
+          <p class="date">Lab write-up</p>
+          <p>Installing Docker, running containers, managing container networking, and troubleshooting connectivity. DevOps-level container engineering.</p>
+          <a href="blog/docker-networking.html">Read more &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer-nav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#resume">Resume</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Sudais Mohamed. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -53,12 +53,9 @@ temp/
 *.temp
 *.bak
 
-# --- Personal/Private (Optional - uncomment if needed) ---
-PERSONAL_INFO.md  
-PROJECT_PLAN.md
-IMPLEMENTATION_CHECKLIST.md
-CODE_STRUCTURE.md
-ASSIGNMENT_INSTRUCTIONS.md
+# --- Markdown docs (keep README.md only) ---
+*.md
+!README.md
 # resume-draft.pdf
 # personal-notes/
 # credentials/
