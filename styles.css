@@ -88,6 +88,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -96,6 +97,7 @@ body {
   line-height: var(--line-height);
   color: var(--text-color);
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 img {
@@ -1302,11 +1304,7 @@ ul {
   position: fixed;
   bottom: var(--spacing-6);
   right: var(--spacing-6);
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--spacing-4);
+  z-index: 1000;
 }
 
 .chat-toggle {
@@ -1349,13 +1347,13 @@ ul {
 }
 
 .chat-window {
-  position: absolute;
-  bottom: 70px;
-  right: 0;
+  position: fixed;
+  bottom: calc(var(--spacing-6) + 70px);
+  right: var(--spacing-6);
   width: 400px;
   max-width: calc(100vw - var(--spacing-12));
   height: 550px;
-  max-height: 80vh;
+  max-height: calc(100vh - 150px);
   background: var(--bg-white);
   border-radius: var(--border-radius-xl);
   box-shadow: var(--shadow-2xl);

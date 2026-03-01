@@ -48,7 +48,7 @@
       id: 'contact',
       keywords: ['contact', 'email', 'reach', 'phone', 'hire', 'linkedin', 'message', 'connect'],
       synonyms: ['get in touch', 'talk', 'call', 'write'],
-      response: "You can reach me at sudaiskedir@gmail.com or (240) 428-9099. I'm based in Silver Spring, MD. Feel free to use the Contact form on this site!"
+      response: "You can reach me at sudaiskedi@gmail.com or (240) 428-9099. I'm based in Silver Spring, MD. Feel free to use the Contact form on this site!"
     },
     {
       id: 'resume',
