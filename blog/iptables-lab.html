@@ -4,34 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iptables Firewall Lab | Sudais Mohamed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    .blog-article { max-width: 720px; margin: 0 auto; }
+    .blog-article h1 { font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl)); font-weight: 900; color: var(--primary); margin-bottom: var(--spacing-4); line-height: var(--line-height-tight); }
+    .blog-article .meta { color: var(--accent); font-size: var(--font-size-sm); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--spacing-8); }
+    .blog-article p { color: var(--text-light); line-height: var(--line-height-relaxed); margin-bottom: var(--spacing-6); font-size: var(--font-size-lg); }
+    .blog-article ul { margin: var(--spacing-6) 0; padding-left: var(--spacing-6); }
+    .blog-article ul li { color: var(--text-light); margin-bottom: var(--spacing-3); line-height: var(--line-height-relaxed); position: relative; padding-left: var(--spacing-4); }
+    .blog-article ul li::before { content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+    .back-link { display: inline-flex; align-items: center; gap: var(--spacing-2); color: var(--accent); font-weight: 600; margin-bottom: var(--spacing-8); transition: gap var(--transition); }
+    .back-link:hover { gap: var(--spacing-3); color: var(--primary); }
+  </style>
 </head>
 <body>
   <nav id="navbar" class="navbar">
     <div class="nav-container container">
-      <a href="../index.html" class="nav-brand">SM</a>
-      <ul class="nav-menu">
+      <a href="../index.html" class="nav-brand">
+        <span class="nav-brand-icon">
+          <span class="material-symbols-outlined">terminal</span>
+        </span>
+        <span>SMPortfolio</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="../index.html#home" class="nav-link">Home</a></li>
         <li><a href="../index.html#about" class="nav-link">About</a></li>
         <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
         <li><a href="../blog.html" class="nav-link">Blog</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="../assets/resume/resume.pdf" target="_blank" rel="noopener" class="nav-resume-btn">Resume</a></li>
       </ul>
     </div>
   </nav>
-  <section class="section" style="padding-top: calc(var(--nav-height) + 2rem);">
-    <div class="container" style="max-width: 720px;">
-      <a href="../blog.html">&larr; Back to Blog</a>
-      <h1 style="margin: 1rem 0;">iptables Firewall Lab — Packet Filtering Basics</h1>
-      <p style="color: var(--text-light); margin-bottom: 1.5rem;">Lab write-up</p>
-      <p>Configuring Linux firewall rules with iptables involves working with three main chains: INPUT, OUTPUT, and FORWARD. In this lab I:</p>
-      <ul style="margin: 1rem 0; padding-left: 1.5rem;">
-        <li>Allowed specific traffic based on ports and protocols</li>
-        <li>Blocked unwanted traffic</li>
-        <li>Filtered packets at the network layer</li>
-      </ul>
-      <p>This taught me packet filtering fundamentals, firewall architecture, and how rules affect traffic flow. It's core cybersecurity engineering.</p>
+
+  <section class="section" style="padding-top: calc(var(--nav-height) + 3rem); min-height: 100vh;">
+    <div class="container">
+      <article class="blog-article">
+        <a href="../blog.html" class="back-link">
+          <span class="material-symbols-outlined">arrow_back</span>
+          Back to Blog
+        </a>
+        <p class="meta">Lab Write-up</p>
+        <h1>iptables Firewall Lab — Packet Filtering Basics</h1>
+        <p>Configuring Linux firewall rules with iptables involves working with three main chains: INPUT, OUTPUT, and FORWARD. Understanding these chains is fundamental to network security and traffic control.</p>
+        <p>In this lab, I explored the following concepts:</p>
+        <ul>
+          <li>Allowed specific traffic based on ports and protocols</li>
+          <li>Blocked unwanted traffic using deny rules</li>
+          <li>Filtered packets at the network layer</li>
+          <li>Understood the order of rule processing</li>
+          <li>Learned to save and restore firewall configurations</li>
+        </ul>
+        <p>This hands-on experience taught me packet filtering fundamentals, firewall architecture, and how rules affect traffic flow. It's a core skill for cybersecurity engineering and network administration.</p>
+        <p>The lab reinforced the importance of understanding the Linux networking stack and how iptables integrates with the Netfilter framework in the kernel.</p>
+      </article>
     </div>
   </section>
-  <footer class="footer"><div class="container"><p class="footer-copy">&copy; 2025 Sudais Mohamed</p></div></footer>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-copy">&copy; 2025 Sudais Mohamed. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/sudais7" target="_blank" rel="noopener">GitHub</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../index.html">Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
 </body>
 </html>

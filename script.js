@@ -96,7 +96,7 @@
     }).finally(function () {
       if (formSubmitBtn) {
         formSubmitBtn.disabled = false;
-        formSubmitBtn.textContent = 'Send Message';
+        formSubmitBtn.textContent = 'Send Inquiry';
       }
     });
   }

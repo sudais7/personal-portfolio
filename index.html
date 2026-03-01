@@ -5,13 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sudais Mohamed - Computer Technology student specializing in IT support, networking, and cybersecurity">
   <title>Sudais Mohamed | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Navigation -->
   <nav id="navbar" class="navbar">
     <div class="nav-container container">
-      <a href="#home" class="nav-brand">SM</a>
+      <a href="#home" class="nav-brand">
+        <span class="nav-brand-icon">
+          <span class="material-symbols-outlined">terminal</span>
+        </span>
+        <span>SMPortfolio</span>
+      </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
         <span class="hamburger"></span>
         <span class="hamburger"></span>
@@ -22,8 +31,8 @@
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
-        <li><a href="#resume" class="nav-link">Resume</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="assets/resume/resume.pdf" target="_blank" rel="noopener" class="nav-resume-btn">Resume</a></li>
       </ul>
     </div>
   </nav>
@@ -32,14 +41,25 @@
   <section id="home" class="section section-home">
     <div class="container">
       <div class="hero-layout">
-        <div class="hero-image-wrap">
-          <img src="assets/images/image.png" alt="Sudais Mohamed - Professional headshot" class="hero-profile-img">
-        </div>
         <div class="hero-content">
-          <h1 class="hero-title">Sudais Mohamed</h1>
-          <p class="hero-tagline">Computer Technology Student | IT Support & Cybersecurity</p>
-          <p class="hero-intro">Strong background in troubleshooting Windows and Linux systems, supporting users, and mentoring. Seeking an IT Support, Systems, Networking, or Cybersecurity internship. Eligible for CPT/OPT.</p>
-          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Open to opportunities
+          </div>
+          <h1 class="hero-title">
+            Hello, I'm <span class="hero-title-accent">Sudais</span>. I build secure IT solutions.
+          </h1>
+          <p class="hero-tagline">
+            Computer Technology student specializing in IT support, systems administration, networking, and cybersecurity. Seeking internship opportunities in IT Support, Systems, Networking, or Cybersecurity.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="hero-image-bg"></div>
+          <img src="assets/images/image.png" alt="Sudais Mohamed - Professional portrait" class="hero-profile-img">
         </div>
       </div>
     </div>
@@ -48,27 +68,71 @@
   <!-- Section: About -->
   <section id="about" class="section section-about">
     <div class="container">
-      <h2 class="section-title">About</h2>
-      <div class="about-content">
-        <p class="about-summary">Computer Technology student with hands-on experience in IT support, systems administration, networking fundamentals, and cybersecurity basics.</p>
-        <div class="about-grid">
-          <div class="about-block">
-            <h3>Skills</h3>
-            <ul>
-              <li>Windows 10/11, Linux, Windows Server</li>
-              <li>TCP/IP, DNS, DHCP, VLANs, subnetting</li>
-              <li>Python, Java, C++</li>
-              <li>Nmap, Nessus, Wireshark</li>
-            </ul>
+      <div class="about-layout">
+        <div class="about-sidebar">
+          <h2 class="about-sidebar-title">Quick Facts</h2>
+          <div class="about-facts">
+            <div class="about-fact">
+              <span class="about-fact-icon">
+                <span class="material-symbols-outlined">code</span>
+              </span>
+              <div>
+                <p class="about-fact-label">Primary Stack</p>
+                <p class="about-fact-value">Python, Linux, Windows Server</p>
+              </div>
+            </div>
+            <div class="about-fact">
+              <span class="about-fact-icon">
+                <span class="material-symbols-outlined">history_edu</span>
+              </span>
+              <div>
+                <p class="about-fact-label">Experience</p>
+                <p class="about-fact-value">IT Support & Mentoring</p>
+              </div>
+            </div>
+            <div class="about-fact">
+              <span class="about-fact-icon">
+                <span class="material-symbols-outlined">school</span>
+              </span>
+              <div>
+                <p class="about-fact-label">Education</p>
+                <p class="about-fact-value">B.S. Computer Technology</p>
+              </div>
+            </div>
+            <div class="about-fact">
+              <span class="about-fact-icon">
+                <span class="material-symbols-outlined">location_on</span>
+              </span>
+              <div>
+                <p class="about-fact-label">Based in</p>
+                <p class="about-fact-value">Maryland, USA</p>
+              </div>
+            </div>
           </div>
-          <div class="about-block">
-            <h3>Education</h3>
-            <p><strong>Bowie State University</strong> — B.S. Computer Technology (May 2026)</p>
-            <p><strong>Montgomery College</strong> — A.S. Information Systems (2023)</p>
+        </div>
+        <div class="about-main">
+          <p class="about-label">Biography</p>
+          <h2 class="about-headline">Building robust IT infrastructure with a focus on security and reliability.</h2>
+          <div class="about-content">
+            <p class="about-summary">
+              As a Computer Technology student at Bowie State University, I bridge the gap between complex technical requirements and practical solutions. My journey began with hands-on troubleshooting and has evolved into a deep appreciation for secure, scalable systems.
+            </p>
+            <p class="about-summary">
+              I believe technology should empower users while maintaining robust security. Whether I'm configuring network infrastructure, hardening Linux servers, or mentoring fellow students in Python programming, my focus remains on reliability, security, and user experience.
+            </p>
+            <p class="about-summary">
+              When I'm not in front of a terminal, I'm usually working on home lab projects, exploring new cybersecurity tools, or contributing to my community through technology volunteering. I'm always looking for the next challenge that pushes the boundaries of what's possible in IT.
+            </p>
           </div>
-          <div class="about-block">
-            <h3>Experience</h3>
-            <p>Python Instructor, IT Mentor, IT Team Member, Technology Volunteer</p>
+          <div class="about-skills">
+            <span class="about-skill-tag">Windows 10/11</span>
+            <span class="about-skill-tag">Linux Administration</span>
+            <span class="about-skill-tag">TCP/IP Networking</span>
+            <span class="about-skill-tag">Python</span>
+            <span class="about-skill-tag">Docker</span>
+            <span class="about-skill-tag">Wireshark</span>
+            <span class="about-skill-tag">Nmap</span>
+            <span class="about-skill-tag">Hyper-V</span>
           </div>
         </div>
       </div>
@@ -78,7 +142,12 @@
   <!-- Section: Projects -->
   <section id="projects" class="section section-projects">
     <div class="container">
-      <h2 class="section-title">Projects & Labs</h2>
+      <div class="projects-header">
+        <div class="projects-header-text">
+          <p class="projects-label">Portfolio</p>
+          <h2 class="projects-title">Selected Engineering Projects</h2>
+        </div>
+      </div>
       <p class="projects-intro">26 home lab projects across virtualization, cybersecurity, DevOps, and network engineering.</p>
       <div class="projects-filter">
         <button class="filter-btn active" data-filter="all">All</button>
@@ -91,139 +160,301 @@
       </div>
       <div class="projects-grid" id="projects-grid">
         <div class="project-card" data-category="virtualization">
-          <h3>Hyper-V Infrastructure Engineering</h3>
-          <p>Created VMs from scratch, built templates for reuse, converted VM disks into templates, attached/detached virtual disks, fixed disk mounting errors, prevented network conflicts between cloned machines.</p>
-          <span class="project-tech">Hyper-V • VHD/VHDX • VM Templates • Windows Server</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Virtualization</span>
+            </div>
+            <h3>Hyper-V Infrastructure Engineering</h3>
+            <p>Created VMs from scratch, built templates for reuse, converted VM disks into templates, attached/detached virtual disks, fixed disk mounting errors, prevented network conflicts between cloned machines.</p>
+            <span class="project-tech">#Hyper-V #VHD/VHDX #VMTemplates #WindowsServer</span>
+          </div>
         </div>
         <div class="project-card" data-category="virtualization">
-          <h3>VirtualBox Infrastructure Lab</h3>
-          <p>Installed Ubuntu Server, configured network adapters, fixed slow performance, managed VM resource allocation, troubleshooted boot and networking issues.</p>
-          <span class="project-tech">VirtualBox • Ubuntu • Networking</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Virtualization</span>
+            </div>
+            <h3>VirtualBox Infrastructure Lab</h3>
+            <p>Installed Ubuntu Server, configured network adapters, fixed slow performance, managed VM resource allocation, troubleshooted boot and networking issues.</p>
+            <span class="project-tech">#VirtualBox #Ubuntu #Networking</span>
+          </div>
         </div>
         <div class="project-card" data-category="virtualization">
-          <h3>Kali Linux Security Environment</h3>
-          <p>Booted Kali via USB, troubleshooted missing wireless adapter, tested wired vs wireless behavior, learned hardware driver dependencies. Penetration testing lab setup.</p>
-          <span class="project-tech">Kali Linux • USB Boot • Drivers</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Security</span>
+            </div>
+            <h3>Kali Linux Security Environment</h3>
+            <p>Booted Kali via USB, troubleshooted missing wireless adapter, tested wired vs wireless behavior, learned hardware driver dependencies. Penetration testing lab setup.</p>
+            <span class="project-tech">#KaliLinux #USBBoot #Drivers</span>
+          </div>
         </div>
         <div class="project-card" data-category="virtualization">
-          <h3>VM Template & Disk Engineering</h3>
-          <p>Created reusable templates, cloned disks, managed VM deployment safely. Enterprise infrastructure engineering.</p>
-          <span class="project-tech">VM Templates • Disk Cloning • Deployment</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Infrastructure</span>
+            </div>
+            <h3>VM Template & Disk Engineering</h3>
+            <p>Created reusable templates, cloned disks, managed VM deployment safely. Enterprise infrastructure engineering.</p>
+            <span class="project-tech">#VMTemplates #DiskCloning #Deployment</span>
+          </div>
         </div>
         <div class="project-card" data-category="virtualization">
-          <h3>Operating System Deployment</h3>
-          <p>Installed and configured Ubuntu Server and Kali Linux. Learned OS deployment and system configuration.</p>
-          <span class="project-tech">Ubuntu • Kali • OS Deployment</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">OS</span>
+            </div>
+            <h3>Operating System Deployment</h3>
+            <p>Installed and configured Ubuntu Server and Kali Linux. Learned OS deployment and system configuration.</p>
+            <span class="project-tech">#Ubuntu #Kali #OSDeployment</span>
+          </div>
         </div>
         <div class="project-card" data-category="linux">
-          <h3>Filesystem Structure Lab</h3>
-          <p>Created files and directories (seinfeld, superman, simpsons), moved files into correct directories, organized filesystem hierarchy. Linux filesystem structure.</p>
-          <span class="project-tech">Linux • Filesystem • Directories</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Linux</span>
+            </div>
+            <h3>Filesystem Structure Lab</h3>
+            <p>Created files and directories (seinfeld, superman, simpsons), moved files into correct directories, organized filesystem hierarchy. Linux filesystem structure.</p>
+            <span class="project-tech">#Linux #Filesystem #Directories</span>
+          </div>
         </div>
         <div class="project-card" data-category="linux">
-          <h3>File Linking Lab</h3>
-          <p>Created jupiter.txt, copied to /tmp, created symbolic and hard links, checked inode numbers. Difference between hard and soft links, inode behavior.</p>
-          <span class="project-tech">ln • ln -s • inode • Links</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Linux</span>
+            </div>
+            <h3>File Linking Lab</h3>
+            <p>Created jupiter.txt, copied to /tmp, created symbolic and hard links, checked inode numbers. Difference between hard and soft links, inode behavior.</p>
+            <span class="project-tech">#ln #ln-s #inode #Links</span>
+          </div>
         </div>
         <div class="project-card" data-category="linux">
-          <h3>File Permission & Ownership Lab</h3>
-          <p>Worked with chmod, chown, root vs normal user, ownership structure. Linux security model and access control.</p>
-          <span class="project-tech">chmod • chown • Permissions</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Security</span>
+            </div>
+            <h3>File Permission & Ownership Lab</h3>
+            <p>Worked with chmod, chown, root vs normal user, ownership structure. Linux security model and access control.</p>
+            <span class="project-tech">#chmod #chown #Permissions</span>
+          </div>
         </div>
         <div class="project-card" data-category="linux">
-          <h3>Linux Command Line Mastery</h3>
-          <p>Mastered ls, ls -l, pwd, cp, mv, rm, chmod, chown, ln, ln -s, cat, less, tail. Core system admin tools.</p>
-          <span class="project-tech">CLI • ls • cp • mv • rm</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Linux</span>
+            </div>
+            <h3>Linux Command Line Mastery</h3>
+            <p>Mastered ls, ls -l, pwd, cp, mv, rm, chmod, chown, ln, ln -s, cat, less, tail. Core system admin tools.</p>
+            <span class="project-tech">#CLI #ls #cp #mv #rm</span>
+          </div>
         </div>
         <div class="project-card" data-category="linux">
-          <h3>Linux System Security Lab</h3>
-          <p>Worked with root user, privilege levels, secure access. Builds system security skill.</p>
-          <span class="project-tech">root • Privileges • Security</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Security</span>
+            </div>
+            <h3>Linux System Security Lab</h3>
+            <p>Worked with root user, privilege levels, secure access. Builds system security skill.</p>
+            <span class="project-tech">#root #Privileges #Security</span>
+          </div>
         </div>
         <div class="project-card" data-category="linux">
-          <h3>Linux File System Internals</h3>
-          <p>Learned inode structure, file linking system, filesystem architecture. Advanced Linux knowledge.</p>
-          <span class="project-tech">inode • Filesystem • Architecture</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Linux</span>
+            </div>
+            <h3>Linux File System Internals</h3>
+            <p>Learned inode structure, file linking system, filesystem architecture. Advanced Linux knowledge.</p>
+            <span class="project-tech">#inode #Filesystem #Architecture</span>
+          </div>
         </div>
         <div class="project-card" data-category="linux">
-          <h3>Command Line Automation</h3>
-          <p>Learned terminal-based system control and system navigation. Builds real admin skill.</p>
-          <span class="project-tech">Terminal • Automation • Control</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Automation</span>
+            </div>
+            <h3>Command Line Automation</h3>
+            <p>Learned terminal-based system control and system navigation. Builds real admin skill.</p>
+            <span class="project-tech">#Terminal #Automation #Control</span>
+          </div>
         </div>
         <div class="project-card" data-category="linux">
-          <h3>Server Administration Lab</h3>
-          <p>Linux server configuration, filesystem management, permission management, VM server deployment. Server architecture and system administration.</p>
-          <span class="project-tech">Server • Configuration • Deployment</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Server</span>
+            </div>
+            <h3>Server Administration Lab</h3>
+            <p>Linux server configuration, filesystem management, permission management, VM server deployment. Server architecture and system administration.</p>
+            <span class="project-tech">#Server #Configuration #Deployment</span>
+          </div>
         </div>
         <div class="project-card" data-category="cybersecurity">
-          <h3>iptables Firewall Implementation</h3>
-          <p>Configured firewall rules, allowed/blocked traffic, filtered packets. INPUT, OUTPUT, FORWARD chains. Packet filtering, firewall architecture, traffic control.</p>
-          <span class="project-tech">iptables • Netfilter • Firewall</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Firewall</span>
+            </div>
+            <h3>iptables Firewall Implementation</h3>
+            <p>Configured firewall rules, allowed/blocked traffic, filtered packets. INPUT, OUTPUT, FORWARD chains. Packet filtering, firewall architecture, traffic control.</p>
+            <span class="project-tech">#iptables #Netfilter #Firewall</span>
+          </div>
         </div>
         <div class="project-card" data-category="cybersecurity">
-          <h3>Netfilter Firewall Architecture</h3>
-          <p>Learned how Linux firewall kernel module works, how packets are processed, how rules affect packet flow.</p>
-          <span class="project-tech">Netfilter • Kernel • Packets</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Security</span>
+            </div>
+            <h3>Netfilter Firewall Architecture</h3>
+            <p>Learned how Linux firewall kernel module works, how packets are processed, how rules affect packet flow.</p>
+            <span class="project-tech">#Netfilter #Kernel #Packets</span>
+          </div>
         </div>
         <div class="project-card" data-category="networking">
-          <h3>UDP Messaging Communication</h3>
-          <p>Ran multiple host terminals, sent UDP messages between hosts, troubleshooted failed delivery, verified port communication. UDP protocol behavior.</p>
-          <span class="project-tech">UDP • Ports • Messaging</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Networking</span>
+            </div>
+            <h3>UDP Messaging Communication</h3>
+            <p>Ran multiple host terminals, sent UDP messages between hosts, troubleshooted failed delivery, verified port communication. UDP protocol behavior.</p>
+            <span class="project-tech">#UDP #Ports #Messaging</span>
+          </div>
         </div>
         <div class="project-card" data-category="networking">
-          <h3>Virtual Network Troubleshooting</h3>
-          <p>Troubleshooted NetworkManager connection failures, VM adapter issues, network configuration.</p>
-          <span class="project-tech">NetworkManager • VM • Troubleshooting</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Troubleshooting</span>
+            </div>
+            <h3>Virtual Network Troubleshooting</h3>
+            <p>Troubleshooted NetworkManager connection failures, VM adapter issues, network configuration.</p>
+            <span class="project-tech">#NetworkManager #VM #Troubleshooting</span>
+          </div>
         </div>
         <div class="project-card" data-category="networking">
-          <h3>Network Infrastructure & Architecture</h3>
-          <p>Studied subnetting, IP addressing, OSI model, TCP vs UDP, network layers. Network engineering foundation.</p>
-          <span class="project-tech">Subnetting • OSI • TCP/UDP</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Infrastructure</span>
+            </div>
+            <h3>Network Infrastructure & Architecture</h3>
+            <p>Studied subnetting, IP addressing, OSI model, TCP vs UDP, network layers. Network engineering foundation.</p>
+            <span class="project-tech">#Subnetting #OSI #TCP/UDP</span>
+          </div>
         </div>
         <div class="project-card" data-category="networking">
-          <h3>Network Troubleshooting Lab</h3>
-          <p>Diagnosed connection failures, adapter problems, firewall blocking issues. Network troubleshooting skill.</p>
-          <span class="project-tech">Diagnostics • Connections • Firewall</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Diagnostics</span>
+            </div>
+            <h3>Network Troubleshooting Lab</h3>
+            <p>Diagnosed connection failures, adapter problems, firewall blocking issues. Network troubleshooting skill.</p>
+            <span class="project-tech">#Diagnostics #Connections #Firewall</span>
+          </div>
         </div>
         <div class="project-card" data-category="cybersecurity">
-          <h3>Packet Sniffing (Scapy)</h3>
-          <p>Built packet sniffer and network monitoring tool. Packet capture and network inspection.</p>
-          <span class="project-tech">Scapy • Packet Capture • Monitoring</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Security</span>
+            </div>
+            <h3>Packet Sniffing (Scapy)</h3>
+            <p>Built packet sniffer and network monitoring tool. Packet capture and network inspection.</p>
+            <span class="project-tech">#Scapy #PacketCapture #Monitoring</span>
+          </div>
         </div>
         <div class="project-card" data-category="cybersecurity">
-          <h3>Wireshark Network Analysis</h3>
-          <p>Captured network packets, analyzed traffic, examined packet contents, studied communication flow. Cybersecurity analyst work.</p>
-          <span class="project-tech">Wireshark • Traffic Analysis</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Analysis</span>
+            </div>
+            <h3>Wireshark Network Analysis</h3>
+            <p>Captured network packets, analyzed traffic, examined packet contents, studied communication flow. Cybersecurity analyst work.</p>
+            <span class="project-tech">#Wireshark #TrafficAnalysis</span>
+          </div>
         </div>
         <div class="project-card" data-category="cybersecurity">
-          <h3>ExifTool Metadata Analysis</h3>
-          <p>Extracted metadata, analyzed file properties. Digital forensics work.</p>
-          <span class="project-tech">ExifTool • Metadata • Forensics</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">Forensics</span>
+            </div>
+            <h3>ExifTool Metadata Analysis</h3>
+            <p>Extracted metadata, analyzed file properties. Digital forensics work.</p>
+            <span class="project-tech">#ExifTool #Metadata #Forensics</span>
+          </div>
         </div>
         <div class="project-card" data-category="cybersecurity">
-          <h3>Nmap Network Scanning</h3>
-          <p>Scanned hosts, identified open ports, analyzed network services. Penetration testing skill.</p>
-          <span class="project-tech">Nmap • Port Scanning • Security</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">PenTest</span>
+            </div>
+            <h3>Nmap Network Scanning</h3>
+            <p>Scanned hosts, identified open ports, analyzed network services. Penetration testing skill.</p>
+            <span class="project-tech">#Nmap #PortScanning #Security</span>
+          </div>
         </div>
         <div class="project-card" data-category="cybersecurity">
-          <h3>Container Firewall Interaction</h3>
-          <p>Tested firewall filtering on containers, network communication through firewall. Integrates cybersecurity, networking, and DevOps.</p>
-          <span class="project-tech">Firewall • Containers • DevOps</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">DevSecOps</span>
+            </div>
+            <h3>Container Firewall Interaction</h3>
+            <p>Tested firewall filtering on containers, network communication through firewall. Integrates cybersecurity, networking, and DevOps.</p>
+            <span class="project-tech">#Firewall #Containers #DevOps</span>
+          </div>
         </div>
         <div class="project-card" data-category="devops">
-          <h3>Docker & Container Engineering</h3>
-          <p>Installed Docker, ran containers, managed container networking, connected containers to networks, troubleshooted connectivity. DevOps-level work.</p>
-          <span class="project-tech">Docker • Containers • Networking</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Lab</span>
+              <span class="project-tag project-tag-secondary">DevOps</span>
+            </div>
+            <h3>Docker & Container Engineering</h3>
+            <p>Installed Docker, ran containers, managed container networking, connected containers to networks, troubleshooted connectivity. DevOps-level work.</p>
+            <span class="project-tech">#Docker #Containers #Networking</span>
+          </div>
         </div>
         <div class="project-card" data-category="devops">
-          <h3>DevSecOps: Secure Software Delivery</h3>
-          <p>Active project — Planning secure deployment environment, containerized services, secure infrastructure. DevOps engineering.</p>
-          <span class="project-tech">DevSecOps • Security • Automation</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Active</span>
+              <span class="project-tag project-tag-secondary">DevSecOps</span>
+            </div>
+            <h3>DevSecOps: Secure Software Delivery</h3>
+            <p>Active project — Planning secure deployment environment, containerized services, secure infrastructure. DevOps engineering.</p>
+            <span class="project-tech">#DevSecOps #Security #Automation</span>
+          </div>
         </div>
         <div class="project-card" data-category="web">
-          <h3>Personal Portfolio Website</h3>
-          <p>Built this portfolio with HTML, CSS, JavaScript, chatbot integration, resume download, QR code. Responsive design, Formspree contact form.</p>
-          <span class="project-tech">HTML • CSS • JavaScript</span>
+          <div class="project-card-body">
+            <div class="project-card-tags">
+              <span class="project-tag project-tag-primary">Project</span>
+              <span class="project-tag project-tag-secondary">Web</span>
+            </div>
+            <h3>Personal Portfolio Website</h3>
+            <p>Built this portfolio with HTML, CSS, JavaScript, chatbot integration, resume download, QR code. Responsive design, Formspree contact form.</p>
+            <span class="project-tech">#HTML #CSS #JavaScript</span>
+          </div>
         </div>
       </div>
       <div class="projects-pagination" id="projects-pagination">
@@ -234,74 +465,81 @@
     </div>
   </section>
 
-  <!-- Section: Resume -->
-  <section id="resume" class="section section-resume">
-    <div class="container">
-      <h2 class="section-title">Resume</h2>
-      <p class="resume-description">View or download my resume with skills, experience, and education.</p>
-      <div class="resume-actions">
-        <a href="assets/resume/resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">View Resume</a>
-        <a href="assets/resume/resume.pdf" download="Sudais_Mohamed_Resume.pdf" class="btn btn-secondary">Download Resume</a>
-      </div>
-    </div>
-  </section>
-
   <!-- Section: Contact -->
   <section id="contact" class="section section-contact">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mreavggy" method="POST">
-        <input type="hidden" name="_subject" value="Portfolio Contact - New message">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your name">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h2>Let's build something extraordinary.</h2>
+          <p>Currently seeking IT Support, Systems, Networking, or Cybersecurity internship opportunities. Eligible for CPT/OPT.</p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <span class="contact-detail-icon material-symbols-outlined">mail</span>
+              <span>sudaismohamed7@gmail.com</span>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon material-symbols-outlined">location_on</span>
+              <span>Maryland, USA</span>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/mreavggy" method="POST">
+            <input type="hidden" name="_subject" value="Portfolio Contact - New message">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Tell me about your project or opportunity..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="form-submit-btn">Send Inquiry</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="Your message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" id="form-submit-btn">Send Message</button>
-        <p id="form-status" class="form-status" aria-live="polite"></p>
-      </form>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <nav class="footer-nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="blog.html">Blog</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
       <div class="footer-qr">
         <p class="footer-qr-label">Scan to visit</p>
         <img id="qr-code" src="" alt="QR Code to portfolio" class="qr-code-img">
       </div>
-      <p class="footer-copy">&copy; 2025 Sudais Mohamed. All rights reserved.</p>
+      <div class="footer-content">
+        <p class="footer-copy">&copy; 2025 Sudais Mohamed. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/sudais7" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/sudais-mohamed" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <!-- Chatbot Widget -->
   <div id="chatbot-widget" class="chatbot-widget">
     <button id="chat-toggle" class="chat-toggle" aria-label="Open chat">
-      <span class="chat-icon">💬</span>
+      <span class="material-symbols-outlined chat-icon">chat</span>
     </button>
     <div id="chat-window" class="chat-window hidden">
       <div class="chat-header">
-        <span>Chat with me</span>
+        <span>Portfolio AI Assistant</span>
+        <p class="chat-header-subtitle">Ask me about my skills or experience!</p>
         <button id="chat-close" class="chat-close" aria-label="Close chat">&times;</button>
       </div>
       <div id="chat-messages" class="chat-messages"></div>
       <div class="chat-input-area">
-        <input type="text" id="chat-input" placeholder="Ask me something..." autocomplete="off">
+        <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off">
         <button id="chat-send" class="chat-send">Send</button>
       </div>
     </div>

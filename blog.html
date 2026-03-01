@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Blog - Sudais Mohamed - IT, Cybersecurity, and Lab write-ups">
   <title>Blog | Sudais Mohamed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .blog-intro { text-align: center; margin-bottom: 2rem; color: var(--text-light); }
-    .blog-list { max-width: 700px; margin: 0 auto; }
-    .blog-post { margin-bottom: 2rem; padding: 1.5rem; background: var(--bg-alt); border-radius: var(--border-radius-lg); border: 1px solid var(--border-color); }
-    .blog-post h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
-    .blog-post .date { font-size: 0.875rem; color: var(--text-light); margin-bottom: 0.75rem; }
-    .blog-post p { color: var(--text-light); margin-bottom: 1rem; }
-    .blog-post a { font-weight: 600; }
-  </style>
 </head>
 <body>
+  <!-- Navigation -->
   <nav id="navbar" class="navbar">
     <div class="nav-container container">
-      <a href="index.html" class="nav-brand">SM</a>
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand-icon">
+          <span class="material-symbols-outlined">terminal</span>
+        </span>
+        <span>SMPortfolio</span>
+      </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
         <span class="hamburger"></span>
         <span class="hamburger"></span>
@@ -30,50 +31,59 @@
         <li><a href="index.html#about" class="nav-link">About</a></li>
         <li><a href="index.html#projects" class="nav-link">Projects</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
-        <li><a href="index.html#resume" class="nav-link">Resume</a></li>
         <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="assets/resume/resume.pdf" target="_blank" rel="noopener" class="nav-resume-btn">Resume</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="section" style="padding-top: calc(var(--nav-height) + 2rem);">
+  <!-- Blog Section -->
+  <section class="section" style="padding-top: calc(var(--nav-height) + 3rem); min-height: 100vh;">
     <div class="container">
-      <h1 class="section-title">Blog</h1>
-      <p class="blog-intro">Lab write-ups, learnings, and reflections on IT, cybersecurity, and DevOps.</p>
+      <div class="projects-header" style="margin-bottom: var(--spacing-8);">
+        <div class="projects-header-text">
+          <p class="projects-label">Blog</p>
+          <h1 class="projects-title">Lab Write-ups & Learnings</h1>
+        </div>
+      </div>
+      <p class="blog-intro">Technical write-ups, learnings, and reflections on IT, cybersecurity, and DevOps projects.</p>
+      
       <div class="blog-list">
         <article class="blog-post">
+          <p class="date">Lab Write-up</p>
           <h3>iptables Firewall Lab — Packet Filtering Basics</h3>
-          <p class="date">Lab write-up</p>
           <p>Configuring Linux firewall rules with iptables: INPUT, OUTPUT, and FORWARD chains. How to allow/block specific traffic, filter packets, and understand firewall architecture.</p>
-          <a href="blog/iptables-lab.html">Read more &rarr;</a>
+          <a href="blog/iptables-lab.html">Read more <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">arrow_forward</span></a>
         </article>
+        
         <article class="blog-post">
+          <p class="date">Lab Write-up</p>
           <h3>Hyper-V VM Templates — Reusable Infrastructure</h3>
-          <p class="date">Lab write-up</p>
           <p>Building VMs from scratch, creating templates for reuse, converting disks, and preventing network conflicts between cloned machines. Enterprise infrastructure engineering.</p>
-          <a href="blog/hyperv-templates.html">Read more &rarr;</a>
+          <a href="blog/hyperv-templates.html">Read more <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">arrow_forward</span></a>
         </article>
+        
         <article class="blog-post">
+          <p class="date">Lab Write-up</p>
           <h3>Docker Container Networking — Hands-On</h3>
-          <p class="date">Lab write-up</p>
           <p>Installing Docker, running containers, managing container networking, and troubleshooting connectivity. DevOps-level container engineering.</p>
-          <a href="blog/docker-networking.html">Read more &rarr;</a>
+          <a href="blog/docker-networking.html">Read more <span class="material-symbols-outlined" style="font-size: 1rem; vertical-align: middle;">arrow_forward</span></a>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <nav class="footer-nav">
-        <a href="index.html#home">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="blog.html">Blog</a>
-        <a href="index.html#resume">Resume</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-      <p class="footer-copy">&copy; 2025 Sudais Mohamed. All rights reserved.</p>
+      <div class="footer-content">
+        <p class="footer-copy">&copy; 2025 Sudais Mohamed. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/sudais7" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/sudais-mohamed" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
     </div>
   </footer>
 
