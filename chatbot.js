@@ -1,6 +1,6 @@
 /**
  * Chatbot Widget - NLP-powered with Compromise.js
- * Intent detection via term extraction, normalization, synonym matching
+ * Premium UI with avatars, timestamps, and quick replies
  */
 
 (function () {
@@ -8,12 +8,16 @@
 
   const chatToggle = document.getElementById('chat-toggle');
   const chatClose = document.getElementById('chat-close');
+  const chatMinimize = document.getElementById('chat-minimize');
   const chatWindow = document.getElementById('chat-window');
   const chatMessages = document.getElementById('chat-messages');
   const chatInput = document.getElementById('chat-input');
   const chatSend = document.getElementById('chat-send');
+  const quickReplyBtns = document.querySelectorAll('.quick-reply-btn');
 
-  const GREETING = "Hi! I'm Sudais. Ask me about my skills, experience, education, projects, or how to contact me.";
+  const GREETING = "Hi there! I'm Sudais's digital assistant. How can I help you today?";
+  
+  let isSending = false;
 
   const INTENTS = [
     {
@@ -50,7 +54,7 @@
       id: 'resume',
       keywords: ['resume', 'cv', 'download', 'document', 'pdf'],
       synonyms: ['get your resume', 'see your resume'],
-      response: "You can view or download my resume from the Resume section on this page. It has my latest skills, experience, and education."
+      response: "You can view or download my resume from the Resume button in the navigation. It has my latest skills, experience, and education."
     },
     {
       id: 'about',
@@ -80,12 +84,39 @@
 
   const FALLBACK = "I'm not sure about that. Try asking about my skills, experience, education, projects, or how to contact me.";
 
+  function getTimeString() {
+    const now = new Date();
+    return now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+  }
+
   function addMessage(text, isUser) {
     if (!chatMessages) return;
+    
+    const wrapper = document.createElement('div');
+    wrapper.className = 'chat-msg-wrapper ' + (isUser ? 'user' : 'bot');
+    
+    const avatar = document.createElement('div');
+    avatar.className = 'chat-msg-avatar ' + (isUser ? 'user' : 'bot');
+    avatar.innerHTML = '<span class="material-symbols-outlined">' + (isUser ? 'person' : 'smart_toy') + '</span>';
+    
+    const content = document.createElement('div');
+    content.className = 'chat-msg-content';
+    
     const msg = document.createElement('div');
-    msg.className = isUser ? 'chat-msg user' : 'chat-msg bot';
+    msg.className = 'chat-msg ' + (isUser ? 'user' : 'bot');
     msg.textContent = text;
-    chatMessages.appendChild(msg);
+    
+    const time = document.createElement('span');
+    time.className = 'chat-msg-time';
+    time.textContent = getTimeString();
+    
+    content.appendChild(msg);
+    content.appendChild(time);
+    
+    wrapper.appendChild(avatar);
+    wrapper.appendChild(content);
+    
+    chatMessages.appendChild(wrapper);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
@@ -158,6 +189,7 @@
       if (chatMessages && chatMessages.children.length === 0) {
         addMessage(GREETING, false);
       }
+      if (chatInput) chatInput.focus();
     }
   }
 
@@ -165,26 +197,47 @@
     if (chatWindow) chatWindow.classList.add('hidden');
   }
 
-  function sendMessage() {
-    var text = chatInput ? chatInput.value.trim() : '';
-    if (!text) return;
-    addMessage(text, true);
+  function sendMessage(text) {
+    if (isSending) return;
+    
+    var messageText = text || (chatInput ? chatInput.value.trim() : '');
+    if (!messageText) return;
+    
+    isSending = true;
+    addMessage(messageText, true);
     if (chatInput) chatInput.value = '';
+    
     setTimeout(function () {
-      addMessage(getBotResponse(text), false);
-    }, 300);
+      addMessage(getBotResponse(messageText), false);
+      isSending = false;
+    }, 400);
   }
 
   if (chatToggle) chatToggle.addEventListener('click', openChat);
   if (chatClose) chatClose.addEventListener('click', closeChat);
+  if (chatMinimize) chatMinimize.addEventListener('click', closeChat);
 
   if (chatSend && chatInput) {
-    chatSend.addEventListener('click', sendMessage);
+    chatSend.addEventListener('click', function() { sendMessage(); });
     chatInput.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
         e.preventDefault();
         sendMessage();
       }
+    });
+  }
+
+  // Quick reply buttons
+  if (quickReplyBtns.length) {
+    quickReplyBtns.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var message = btn.getAttribute('data-message');
+        if (message) {
+          sendMessage(message);
+        }
+      }, { once: false });
     });
   }
 })();

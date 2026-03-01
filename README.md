@@ -1,89 +1,96 @@
 # Sudais Mohamed — Personal Portfolio
 
-A professional personal portfolio website showcasing skills, experience, education, and projects. Built with HTML, CSS, and JavaScript. Includes an interactive chatbot, QR code for easy access, and downloadable resume.
+A modern, professional portfolio website showcasing skills, experience, education, and 26+ home lab projects. Built with HTML, CSS, and JavaScript featuring a premium design, NLP-powered chatbot, dynamic QR code, and downloadable resume.
+
+![Portfolio Screenshot](assets/images/portfolio_screenshot.png)
 
 ---
 
 ## Live Demo
 
-https://joyful-jalebi-2f13b7.netlify.app/
+**Website:** [https://joyful-jalebi-2f13b7.netlify.app/](https://joyful-jalebi-2f13b7.netlify.app/)
 
-**GitHub:** https://github.com/sudais7/personal-portfolio
+**GitHub:** [https://github.com/sudais7/personal-portfolio](https://github.com/sudais7/personal-portfolio)
 
 ---
 
-## Site Navigation
+## Features
+
+- **Premium Modern Design** — Glass-effect navigation, gradient backgrounds, smooth animations
+- **Responsive Layout** — Optimized for desktop, tablet, and mobile devices
+- **NLP-Powered Chatbot** — Uses Compromise.js for natural language understanding
+- **26 Project Cards** — Filterable by category with pagination
+- **Dynamic QR Code** — Auto-generated link to live portfolio
+- **Contact Form** — Powered by Formspree with AJAX submission
+- **Blog Section** — Lab write-ups and technical articles
+
+---
+
+## Site Sections
 
 | Section | Description |
 |---------|-------------|
-| **Home** | Introduction with profile photo, tagline, and call-to-action to view projects |
-| **About** | Skills (OS, networking, programming, cybersecurity), education (Bowie State, Montgomery College), and professional experience |
-| **Projects** | Project cards with descriptions and links to GitHub repositories |
-| **Resume** | View (opens in new tab) or download PDF resume |
-| **Contact** | Form for visitors to send messages (powered by Formspree) |
+| **Home** | Hero section with profile photo, animated badge, and call-to-action buttons |
+| **About** | Quick facts sidebar, biography, and skill tags |
+| **Projects** | 26 lab projects with category filters (Virtualization, Linux, Networking, Cybersecurity, DevOps, Web) |
+| **Blog** | Technical write-ups on iptables, Hyper-V, Docker networking |
+| **Contact** | Premium contact form with social media links |
 
 ---
 
 ## Chatbot
 
-The portfolio includes a **JavaScript-based chatbot** that answers frequently asked questions.
+The portfolio includes an **NLP-powered chatbot** with a premium UI design.
 
-### Implementation
-- **Library:** Vanilla JavaScript (no external chatbot framework)
-- **Logic:** Keyword matching with predefined FAQ responses
-- **Topics covered:** Skills, experience, education, projects, contact info, resume
+### Features
+- **Natural Language Processing** using Compromise.js
+- **Intent Detection** with keyword and synonym matching
+- **Quick Reply Buttons** for common questions
+- **Message Timestamps** and user/bot avatars
+- **Online Status Indicator**
 
-### What It Answers
-- Questions about technical skills (Python, Windows, Linux, networking, cybersecurity)
-- Work experience (Python Instructor, IT Mentor, etc.)
-- Education (Bowie State, Montgomery College)
-- How to view projects or download resume
-- How to get in contact
-- General "about you" and greeting/thank-you exchanges
+### Topics Covered
+- Technical skills (Python, Windows, Linux, networking, cybersecurity tools)
+- Work experience (Python Instructor, IT Mentor, IT Team Member)
+- Education (Bowie State University, Montgomery College)
+- Projects and GitHub repositories
+- Contact information and resume
 
 ### Usage
-1. Click the chat bubble (💬) in the bottom-right corner
-2. Type a question (e.g., "What are your skills?" or "How can I contact you?")
-3. Press Enter or click Send
+1. Click the glowing chat icon in the bottom-right corner
+2. Use quick reply buttons or type a question
+3. Press Enter or click the send button
 
 ---
 
 ## Tech Stack
 
-- **HTML5** — Semantic structure and accessibility
-- **CSS3** — Custom properties, Flexbox, Grid, responsive design
-- **JavaScript** — Navigation, mobile menu, form handling, QR code, chatbot
+| Technology | Purpose |
+|------------|---------|
+| **HTML5** | Semantic structure and accessibility |
+| **CSS3** | Custom properties, Flexbox, Grid, animations |
+| **JavaScript** | Interactivity, form handling, chatbot logic |
+| **Compromise.js** | Natural language processing for chatbot |
+| **Formspree** | Contact form backend |
+| **Google Fonts** | Inter font family |
+| **Material Symbols** | Icon library |
 
 ---
 
 ## Run Locally
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/sudais7/personal-portfolio.git
    cd personal-portfolio
    ```
 
-2. Serve the files (any static server works):
+2. **Serve the files** (any static server works):
    - **VS Code Live Server:** Right-click `index.html` → Open with Live Server
    - **Python:** `python -m http.server 8000` then open http://localhost:8000
    - **Node:** `npx serve` or `npx live-server`
 
-3. Open `index.html` in a browser (or use a local server for best results)
-
----
-
-## Configuration
-
-- **Contact Form:** Replace `YOUR_FORM_ID` in `index.html` with your [Formspree](https://formspree.io) form ID
-- **Projects:** Edit project cards in `index.html` with your real projects and GitHub links
-- **Resume:** Place `resume.pdf` in `assets/resume/` (already included)
-
----
-
-## QR Code
-
-The QR code in the footer is generated dynamically from the current page URL. It updates automatically when deployed — visitors can scan it to share or revisit the portfolio.
+3. Open in browser at `http://localhost:8000`
 
 ---
 
@@ -91,13 +98,19 @@ The QR code in the footer is generated dynamically from the current page URL. It
 
 ```
 personal-portfolio/
-├── index.html
-├── styles.css
-├── script.js
-├── chatbot.js
+├── index.html          # Main portfolio page
+├── blog.html           # Blog listing page
+├── styles.css          # Premium design system
+├── script.js           # Navigation, form, projects filter
+├── chatbot.js          # NLP chatbot logic
+├── blog/
+│   ├── iptables-lab.html
+│   ├── hyperv-templates.html
+│   └── docker-networking.html
 ├── assets/
 │   ├── images/
-│   │   └── image.png      (profile photo)
+│   │   ├── image.png              # Profile photo
+│   │   └── portfolio_screenshot.png
 │   └── resume/
 │       └── resume.pdf
 └── README.md
@@ -105,6 +118,23 @@ personal-portfolio/
 
 ---
 
+## Configuration
+
+| Item | Instructions |
+|------|--------------|
+| **Contact Form** | Form is pre-configured with Formspree endpoint |
+| **Projects** | Edit project cards in `index.html` to add/modify projects |
+| **Resume** | Replace `assets/resume/resume.pdf` with your resume |
+| **Profile Photo** | Replace `assets/images/image.png` with your photo |
+
+---
+
+## QR Code
+
+The footer QR code dynamically links to the live portfolio URL. Visitors can scan it to quickly access or share the site.
+
+---
+
 ## License
 
-© 2025 Sudais Mohamed. All rights reserved.
+© Sudais Mohamed. All rights reserved.
